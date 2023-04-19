@@ -85,7 +85,7 @@ def getDescription():
 
 def getSeverityDict():
     global severityDictionary
-    with open('symptom_severity.csv') as csv_file:
+    with open('Symptom_severity.csv') as csv_file:
 
         csv_reader = csv.reader(csv_file, delimiter=',')
         line_count = 0
@@ -225,6 +225,3 @@ def getDesc():
     global present_disease, description_list
     return {'diseaseDesc' : description_list[present_disease[0]], 'disease':present_disease[0], 'precautions' : precautionDictionary[present_disease[0]]}
 
-
-if __name__ == "__main__":
-    app.run(debug= True)
